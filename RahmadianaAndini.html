@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Surat Terbuka Untuk Diana</title>
+
+<style>
+body {
+  margin:0;
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(135deg,#fdecef,#fff1f4);
+  font-family:'Segoe UI',sans-serif;
+  overflow:hidden;
+}
+
+.container {
+  background:white;
+  padding:40px;
+  border-radius:25px;
+  box-shadow:0 15px 35px rgba(0,0,0,.1);
+  max-width:520px;
+  width:90%;
+  text-align:center;
+  animation:fade .6s ease;
+  position:relative;
+  z-index:2;
+}
+
+.hidden { display:none; }
+
+h1,h2 { color:#c2185b; }
+p { font-size:1.05rem; line-height:1.7; text-align:left; }
+
+.btn {
+  padding:14px 30px;
+  border:none;
+  border-radius:30px;
+  font-size:1rem;
+  font-weight:bold;
+  cursor:pointer;
+  margin:12px 8px 0;
+}
+
+.primary { background:#c2185b; color:white; }
+.yes { background:#4caf50; color:white; }
+.no { background:#f44336; color:white; position:relative; }
+
+.heart {
+  position:absolute;
+  color:rgba(244,67,54,.3);
+  animation:jatuh linear infinite;
+}
+
+@keyframes jatuh {
+  from { transform:translateY(100vh); }
+  to { transform:translateY(-10vh); }
+}
+
+@keyframes fade {
+  from { opacity:0; transform:translateY(10px); }
+  to { opacity:1; transform:translateY(0); }
+}
+</style>
+</head>
+
+<body>
+
+<audio id="lagu" loop>
+  <source src="https://WaGun007.github.io/Confess/alamak.mp3.mp3" type="audio/mpeg">
+</audio>
+
+<!-- PAGE 1 -->
+<div class="container" id="page1">
+  <h1>Assalamu’alaikum Diana ✨</h1>
+  <p style="text-align:center">
+    Ada hal yang pengen aku sampaikan ke kamu.
+  </p>
+  <button class="btn primary" onclick="kePage2()">📩Buka Pesan📩</button>
+</div>
+
+<!-- PAGE 2 -->
+<div class="container hidden" id="page2">
+  <h2>Sedikit Cerita</h2>
+  <p>
+    Sebelumnya aku mau nanya ke kamu,
+    sebenernya alasan kamu main CMB itu apa ya?
+    Sekadar cari teman atau emang ada niatan ke arah yang lebih serius?
+  </p>
+  <p>
+    Jujur aja, aku main CMB itu memang sebagai bentuk ikhtiar aku
+    buat cari pasangan.
+    Di umur yang udah mau menginjak kepala tiga,
+    aku ngerasa waktu buat nyari pasangan dan PDKT itu ngga sebanyak dulu.
+  </p>
+  <p>
+    Terus pas pertama kali kita match dan ternyata kerja di perusahaan yang sama,
+    rasanya kayak ga nyangka aja.
+    Azeek lebay ya 😄
+    Tapi serius, aku seneng aja bisa match sama perempuan secantik kamu,
+    apalagi satu perusahaan.
+  </p>
+  <button class="btn primary" onclick="kePage3()">Lanjut</button>
+</div>
+
+<!-- PAGE 3 -->
+<div class="container hidden" id="page3">
+  <h2>Jujur dari Aku</h2>
+  <p>
+    Aku sebenernya introvert,
+    jadi ngga gampang buat mulai sebuah pendekatan.
+  </p>
+  <p>
+    Tapi aku juga ngga mau kehilangan kesempatan
+    cuma gara-gara aku ngga berani ngomong jujur ke kamu.
+  </p>
+  <p>
+    Aku sempat cerita ke mama kalau aku kenal sama seseorang
+    dan kebetulan kita sama-sama kerja di BSI.
+    Aku tunjukin foto kamu yang di CMB ke mama,
+    dan reaksinya luar biasa.
+    Baru kali itu aku liat mama aku seantusias itu.
+  </p>
+  <p>
+    Jadi to the point aja ya Diana,
+    apakah saat ini kamu <b>Open for Relationship</b>?
+  </p>
+  <button class="btn primary" onclick="kePage4()">Lanjut</button>
+</div>
+
+<!-- PAGE 4 -->
+<div class="container hidden" id="page4">
+  <h2>Pertanyaanku 🤍</h2>
+  <p>
+    Kalau iya, InsyaAllah aku mau berusaha dan berharap kamu berkenan
+    memberi kesempatan untuk kita saling mengenal.
+    Dikasih kesempatan untuk ketemu dan ngobrol aja aku udah cukup seneng kok.
+  </p>
+  <p>
+    Aku percaya cinta yang baik itu tidak menggebu-gebu,
+    tapi tumbuh melalui proses.
+    Targetku menikah sekali untuk seumur hidup.
+  </p>
+  <p>
+    Menurut aku,
+    hubungan yang baik itu hubungan yang tenang,
+    ngga saling nuntut,
+    tapi sama-sama saling memahami dan tumbuh bersama.
+  </p>
+  <p>
+    Aku yakin pasti banyak laki-laki yang kagum sama kamu.
+    Kamu cantik, mandiri, kreatif, dan kelihatan ceria.
+  </p>
+  <p>
+    Tapi kalau misalnya kamu masih nunggu seseorang,
+    aku paham kok.
+    karena memang tidak bisa memaksakan perasaan.
+  </p>
+  <p>
+    Makasih banyak ya Diana udah meluangkan waktu untuk baca ini.
+    Aku cuma berusaha nyampein apa yang pengen aku sampaikan.
+    Semoga niat dan tujuan baik aku ini bisa kamu terima.
+  </p>
+
+  <div style="text-align:center">
+    <button class="btn yes" onclick="terima()">Iya, Kita Coba 🤍</button>
+    <button class="btn no" id="noBtn">Maaf, ngga dulu ☹</button>
+  </div>
+</div>
+
+<!-- PAGE 5 -->
+<div class="container hidden" id="page5">
+  <h1>Terima Kasih 🌷</h1>
+  <p style="text-align:center">
+    Makasih ya sudah baca sampai selesai, apapun jawaban kamu tolong kabarin aku ya 🤍
+  </p>
+  <button class="btn yes" onclick="kirimWA()">Kabarin Disini</button>
+</div>
+
+<script>
+const lagu = document.getElementById("lagu");
+const nomorWA = "6285174466998";
+const pesanWA = "Halo, aku sudah baca pesannya. Terima kasih atas kejujuran dan niat baikmu 🤍";
+
+function kePage2(){
+  lagu.play();
+  tampil("page2");
+  jatuhkanHati();
+}
+
+function kePage3(){ tampil("page3"); }
+function kePage4(){ tampil("page4"); }
+function terima(){ tampil("page5"); }
+
+function tampil(id){
+  document.querySelectorAll(".container").forEach(el=>el.classList.add("hidden"));
+  document.getElementById(id).classList.remove("hidden");
+}
+
+function kirimWA(){
+  window.open(`https://wa.me/${nomorWA}?text=${encodeURIComponent(pesanWA)}`,"_blank");
+}
+
+// tombol no kabur
+const noBtn = document.getElementById("noBtn");
+noBtn.addEventListener("mouseover",()=>{
+  const x=Math.random()*(window.innerWidth-noBtn.offsetWidth);
+  const y=Math.random()*(window.innerHeight-noBtn.offsetHeight);
+  noBtn.style.position="fixed";
+  noBtn.style.left=x+"px";
+  noBtn.style.top=y+"px";
+});
+
+// hati jatuh
+function jatuhkanHati(){
+  setInterval(()=>{
+    const h=document.createElement("div");
+    h.className="heart";
+    h.innerHTML="❤️";
+    h.style.left=Math.random()*100+"vw";
+    h.style.fontSize=(Math.random()*10+15)+"px";
+    h.style.animationDuration=(Math.random()*3+2)+"s";
+    document.body.appendChild(h);
+    setTimeout(()=>h.remove(),5000);
+  },300);
+}
+</script>
+
+</body>
+</html>
